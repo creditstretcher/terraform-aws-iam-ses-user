@@ -16,5 +16,4 @@ output "this_access_key" {
 output "this_ses_smtp_password" {
   value       = element(concat(aws_iam_access_key.this.*.ses_smtp_password, [""]), 0)
   description = "The secret access key converted into an SES SMTP password"
-  sensitive   = false
 }
